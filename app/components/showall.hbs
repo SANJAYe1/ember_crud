@@ -1,0 +1,20 @@
+<table class="e-table">
+            <tr class="table-row">
+              <th>Name</th>
+              <th>Age</th>
+              <th>Employee id</th>
+              <th>Action</th>
+              <th>Actions</th>
+            </tr>
+            {{#each this.employees as |employee|}}
+            <tr class="table-row">
+                <td>{{employee.name}}</td>
+                <td>{{employee.age}}</td>
+                <td>{{employee.employee_id}}</td>
+                <td><button name="edit" value="edit" class="secondary-action-btn" {{on 'click' (fn this.edit employee)}}>EDIT</button>
+                </td>
+                <td><button name="delete" value="delete" class="secondary-action-btn" {{on 'click' (fn this.deleteEmployee employee.id)}}>DELETE</button>
+                </td>
+              </tr>
+            {{/each}}
+          </table>

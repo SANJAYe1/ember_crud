@@ -1,0 +1,9 @@
+ <form {{on "submit"  this.addEmployee }} class="form">
+        <label>Full Name</label>
+        <input type="text" name="name" required maxlength="30" minlength="4" autofocus value={{this.employee.name}}><br><br>
+        <label>Employee Id</label>
+        <input type="number" name="employee_id" required value={{this.employee.employee_id}}><br><br>
+        <label>Age</label>
+        <input type="number" name="age" min="18" max="60" required value={{this.employee.age}}><br><br>
+        <input type="submit">
+</form> 
